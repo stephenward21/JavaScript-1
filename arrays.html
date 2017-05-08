@@ -1,0 +1,124 @@
+<script type="text/javascript">
+
+//ARRAYS 
+// var student1 = "Daniel"
+// var student2 = "Merilee"
+// var student3 = "Chris"
+// var student4 = "Stephen"
+
+// var students = []
+// students = ["Daniel", "Merilee", "Chris", "Stephen"]
+// console.log(students);
+// console.log(students.length);
+
+
+
+// var nfcSouth = [
+// 	'Falcons',
+// 	'Panthers',
+// 	'Saints',
+// 	'Bucs'
+
+// ]
+
+// console.log(nfcSouth[0])
+// console.log(nfcSouth[4]) //Undefined even out of range
+
+// //Append = Push in JSCRIPT
+
+// nfcSouth.push("Cowboys")
+// console.log(nfcSouth);
+// nfcSouth.pop() // removes the last element
+// console.log(nfcSouth);
+
+// //Slice gets you a copy, but does not change original array from x to y (y not included)
+// console.log(nfcSouth.slice(1, 3))
+// console.log(nfcSouth.slice(-2, -1))
+
+// //Splice is going to remove or add stuff from the array (takes at least one intem(index) to where to add or remove) then follows the with actual number of elements you want to remove after that starting place.
+
+// nfcSouth.splice(1, 1, "Cowboys");
+// console.log(nfcSouth);
+
+
+// var atlTeams = [
+// 	"Falcons",
+// 	"Braves",
+// 	"Hawks",
+// 	"Thrashers"
+
+// ]
+
+// var newTeam = prompt("Please enter a new team in town");
+// atlTeams.push(newTeam);
+// console.log(atlTeams)
+
+// atlTeams.splice(-1, 1, newTeam)
+// console.log(atlTeams)
+// if (atlTeams[-1] == "ATL United"){
+// 	console.log("Correct team added")
+// }
+
+
+// //LOOPS
+
+// numberNotGuessed = false;
+// while(numberNotGuessed)
+
+
+// EXERCISES 1 - 3
+
+//1.
+
+var daysOfWeek = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+var pickADay = prompt("Pick a day, 0 through 6");
+
+// QUICK answer
+
+// if (pickADay < 5 && >=0){
+// 	console.log ("Go to work")
+
+// }
+// else {
+// 	console.log("Sleep in!")
+
+// }
+
+// More detailed answer
+
+if (pickADay == 0){
+	console.log("It's " + daysOfWeek[0] + " ,Go to Work!")
+}
+else if (pickADay == 1){
+	console.log("It's " + daysOfWeek[1] + " ,Go to Work!")
+}
+else if (pickADay == 2){
+	console.log("It's " + daysOfWeek[2] + " ,Go to Work!")
+}
+else if (pickADay == 3){
+	console.log("It's " + daysOfWeek[3] + "Go to Work!")
+}
+else if (pickADay == 4){
+	console.log("It's " + daysOfWeek[4] + " ,Go to Work!")
+}
+else if (pickADay == 5){
+	console.log("It's " + daysOfWeek[5] + " ,Sleep in!")
+}
+else if (pickADay == 6){
+	console.log("It's " + daysOfWeek[6] + " ,Sleep in!")
+}
+
+// #2
+
+var daysInMonth = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 ]
+var monthEntered = prompt("Enter a month number between (1-12)");
+var monthIndex = monthEntered - 1; 
+
+console.log(month)
+
+if ((monthEntered == 9) || (monthEntered == 4) || (monthEntered == 6) || (monthEntered == 11)){
+	console.log()
+}
+
+
+</script>

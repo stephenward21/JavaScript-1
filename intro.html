@@ -1,0 +1,171 @@
+<script type="text/javascript">
+
+
+
+// Printing stuff...
+// window.alert("Hello, world!");
+// alert("Hello, world!");
+
+// console.log("Hello, world!");
+
+// // -Document Object Model (DOM)
+// // - Actually write to the document itself
+// document.write("Hello, World!")
+
+
+// VARIABLES
+// - Same as in every other language.  A place to stash something that's slow so you can get it fast.
+// Data-types
+// -strings
+// -numbers
+// ----Floats and integers
+// Booleans
+// Arrays
+// Objects(Dictionary/Object)
+
+// 1. JS variables when created, start with var.
+// 2. Var means I am creating a variable in the current scope.
+// 3. You dont use var again once variable declared.
+
+// var fullName = "Robert Bunch";  //Declariing and assigning a variable
+// fullName = "Sean B."; //Var already declared so just assign it.
+// fullName = "Robert  \"The Man\" Bunch";
+// fullName = 'Robert "The Mane" Bunch';
+// var firstName = "Robert";
+// var nickName = "The Man";
+// var lastName = "Bunch";
+
+// console.log(firstName + nickName + lastName);
+
+
+// //NUMBERS
+
+// var theYear = 2017;
+// var theYearDetalied = 2017.45 //float
+// var yearAsAString = "2017";
+// console.log(typeof(theYear));
+// console.log(typeof(theYearDetailed));
+// console.log(typeof(yearAsAString));
+
+// var twoYearsAgo = theYear - 2;
+// console.log(twoYearsAgo);
+// twoYearsAgo = yearAsAString + 2;
+// console.log(twoYearsAgo);
+
+
+// //BOOLEANS
+
+// var theTruth = true;
+// console.log(typeof(theTruth));
+// var theLie = false;
+// console.log(typeof(theLie));
+
+// // + addition
+// // - substract
+// // * multiply
+// // / divide
+// // % modulus
+
+// var amIEven = 5 % 2;
+// console.log(amIEven);
+
+// var i = 1
+// // i++; = i += 1
+// // i-- = i -= 1
+// console.log(i);
+
+// // i = 1;
+// // console.log(i++);
+// // console.log(i);
+// // console.log(++i);
+// // console.log(i);
+
+// //Order of Operations works same as Python and as math in general....
+
+
+// // // PROMPT takes two arguments, the first is the message to display, the second(optional) is the default answer/response.
+
+// // var getUserName = prompt("What is your name?", "Sean");
+// // console.log(getUserName);
+
+
+// //CONDITIONALS 
+// var classSize = 16;
+// var question = "How big is your coding class?";
+// var response = prompt(question, classSize);
+// // == is a comparison operator
+// // = is an assignment
+// // === is comparison + datatype
+
+// if (Number(response) == 16) {
+// 	console.log("You must be in the April class.");
+// }else{
+// 	console.log("You are not in the April class.")
+// }
+
+// var userInput = prompt("Please enter a number between 1 and 10");
+// var inputAsNumber = parseInt(userInput)
+// // console.log(inputAsNumber);
+
+// // if (typeof(inputAsNumber) == "number"){
+// // 	console.log("Thank you for entering a number")
+// // }else{
+// // 	console.log("Please enter a number")
+// // }
+
+// if (!isNan(inputAsNumber)){
+// 	console.log("Thank you for entering a number")
+// }else{
+// 	console.log("Please enter a number")
+// }
+
+// Continue asking for a number 1-10,
+// if they give you a number less than 1, alert them(console)
+// if they give you a number greater than 10, alert them (console)
+// if they give you something that is not a number, alert them (console)
+// if they guess the number, aler them, otherwise console them
+// 	if user is within 2, tell them they were close
+// 	if user is not within 2, tell them they are garbage.
+
+
+var randomNumber = parseInt(Math.random() * 10);
+var userInput = prompt("Pick a number between 1 and 10");
+console.log(randomNumber)
+if (userInput < 1){
+	console.log("Need positive numbers!");
+}
+
+else if (userInput > 10){ // Or put this up as an "OR" conditional in the above "If"
+	console.log("Number to high out of range!");
+}
+
+else if (userInput == randomNumber){
+	console.log("You guessed right!")
+}
+
+else if (isNan(userInput)){
+	console.log("You didn't enter a number!");
+}
+
+// else if ((randomNumber - userInput) <= 2 && (randomNumber - userInput) >= -2) {
+else if (Math.abs(userInput - randomNumber) <= 2){
+	console.log("You are close");
+}
+
+else {
+	console.log("You are garbage");
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>

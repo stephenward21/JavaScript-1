@@ -1,0 +1,72 @@
+<script type="text/javascript">
+	
+var weekdays = ["Sunday", "Monday", "Tuesday", "Wednesday","Thursday","Friday","Saturday"];
+var dayOfWeek = prompt("What day of the week is in question?");
+// if(dayOfWeek == weekdays[0]){
+// 	console.log("Go to church, you heathen!");
+// }else if(dayOfWeek == weekdays[1]){
+// 	console.log("Monday sucks")
+// 	// ... Other days...
+// }else{
+// 	console.log("Hurrah, it's Saturday")
+// }
+// For loop:
+
+for(let i=0; i < weekdays.length; i++){
+	if(dayOfWeek == weekdays[i]){
+		if((i == 0) || (i == 6)){
+			console.log("Sleep in")
+		}else{
+			console.log("Go to work")
+		}
+	}
+}
+var dayIndexInArray = weekdays.indexOf(dayOfWeek);
+// console.log(dayIndexInArray)
+if(dayIndexInArray == -1){
+	console.log("Nice try. There are 7 days in teh week. You have to pick one for me to work.")
+}else if((dayIndexInArray == 0) || (dayIndexInArray == 6)){
+	console.log("Sleep in.")
+}else if((dayIndexInArray >= 1) && (dayIndexInArray <= 5)){
+	console.log("Go to work.")
+}
+</script>
+
+
+<!-- 2. Given a month number, between 1 and 12, and a year, print the number of days in that month - accounting for leap years.
+ --> 
+
+<script type="text/javascript">
+var months = [
+	31,
+	28,
+	31,
+	30,
+	31,
+	30,
+	31,
+	31,
+	30,
+	31,
+	30,
+	31
+]
+var monthsAsObject= {
+	"January":31,
+	"February":28,
+	"March":31
+}
+var monthEntered = prompt("Enter a month number (between 1-12)")
+// if((monthEntered == 9) || (monthEntered == 4) || (monthEntered == 6) || (monthEntered == 11)){
+// 	console.log()
+// }
+// Object style
+// for key, value in monthsAsObject{
+// 	if(monthEnterd == key){
+// 		console.log("Days in " + key + " = " + value)
+// 	}
+// }
+monthIndex = monthEntered - 1;
+console.log(monthsAsObject[monthEntered])
+console.log(months[monthIndex] + " days in " + monthIndex)
+</script>

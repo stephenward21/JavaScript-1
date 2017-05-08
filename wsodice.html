@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>WSOD</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<style type="text/css" media="screen">
+		#money {
+
+			color: darkgreen;
+			font-weight: bold;
+			font-size: 24px;
+		}
+
+
+	</style>
+
+
+	
+
+</head>
+<body>
+
+<div id="game-wrapper">
+	<div class="text-center"><img src="http://25.media.tumblr.com/b7cd7e1e73a45212e491a4d7c820996f/tumblr_mywln1kRqR1sq4aoao3_500.png" name="wsodImage"></div>
+	<div id="message" class="text-center"> Welcome to the World Series of Dice! You have been matched up with Leonard Washington, would you like to play? </div>
+	<div id="money" class="text-center"> CASH: $100 </div> 
+	<div class="text-center">
+		<button class="btn btn-default" onclick="rollDice()"> Let's Roll! </button>
+	</div>
+	<div class="text-center">
+		<img src="dragon-assets/d1.gif" name="die1image">
+		<img src="dragon-assets/d1.gif" name="die2image">
+	</div>
+</div>
+
+
+<script type="text/javascript">
+
+	var money = 100;
+
+	function rollDice(){
+		// console.log("The user clicked the fight button")
+		var randomDie1 = Math.ceil(Math.random() * 6);
+		var randomDie2 = Math.ceil(Math.random() * 6);
+		// console.log(randomDie1);
+		// console.log(randomDie2);
+		var die1 = "dragon-assets/d" + randomDie1 + ".gif";
+		var die2 = "dragon-assets/d" + randomDie2 + ".gif";
+		document.images.die1image.src = die1;
+		document.images.die2image.src = die2;
+
+	
+
+		if(randomDie1 + randomDie2 > 8) {
+			document.images.wsodImage.src = "https://www.colourbox.com/preview/1966707-two-dice-laying-over-a-pile-of-money.jpg"
+			document.getElementById('message').innerHTML = "You have defeated Leonard! Count your money!";
+			money += 500
+			console.log(money)
+			document.getElementById('money').innerHTML = "You now have $" + money + " in the bank!";
+
+
+		}else if ((randomDie1 == 1) && (randomDie2 == 1)){
+			document.images.wsodImage.src = "http://aaaonlinecasinos.com/wp-content/uploads/2014/09/aaa-online-casinos-snake-eyes.jpg"
+			document.getElementById('message').innerHTML = "SNAKE EYES!! You've lost all your money!"
+			money -= money
+			console.log(money)
+			document.getElementById('money').innerHTML = "You now have $" + money + " in the bank!";
+
+
+		}else if (randomDie1 + randomDie2 == 7) {
+			document.images.wsodImage.src = "http://i.imgur.com/lOxpPi4.gif"
+			document.getElementById('message').innerHTML = "7! Your get the half the $$!";
+			money += 250
+			console.log(money)
+			document.getElementById('money').innerHTML = "You now have $" + money + " in the bank!";
+
+		}else{
+			document.images.wsodImage.src = "https://pbs.twimg.com/media/CXFaFzKUsAAUu6U.jpg"
+			document.getElementById('message').innerHTML = "No Dice, Son! Time to pay up!";
+			money -= 75
+			console.log(money)
+			document.getElementById('money').innerHTML = "You now have $" + money + " in the bank!";
+		}
+
+	
+	}
+
+</script>
+
+</body>
+</html>
+
