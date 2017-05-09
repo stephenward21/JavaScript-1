@@ -1,0 +1,63 @@
+<script type="text/javascript">
+
+//This is an empty Array
+var students = [];
+
+//This is an empty OBJECT: {}'s for objects.
+var student = {};
+//Objects has properties(or keys);
+console.log(student.name);
+student.name = "Stephen";
+console.log(student.name);
+student.age = 30;
+console.log(student)
+
+student2 = {
+	name: "Stephen",
+	profession: "Student",
+	language: "JavaScript"
+
+}
+
+student3 = {
+	name: "Drew",
+	friends: [
+		"YingRong",
+		"Carla",
+		"Daniel"
+	],
+	sayHello: function(nameOfFriend){
+		console.log("Hello! " + nameOfFriend);
+	},
+	addFriend: function(nameOfFriend){
+		console.log(this)
+		this.friends.push(nameOfFriend);
+	}
+}
+
+console.log(student3);
+console.log(student3.friends[1]);
+student3.sayHello("Chad");
+student3.sayHello("Merilee");
+student3.addFriend("Shane");
+console.log(student3.friends);
+
+//Bracket notation(vs dot notation)
+var propName = "friends";
+console.log(student3[propName]);
+// this will print all the friends for student3
+
+
+students = [];
+students.push(student)
+students.push(student2)
+students.push(student3)
+console.log(students);
+
+
+console.log(students[2].name);
+console.log(students[2].friends[2]);
+students[2].sayHello();
+
+
+</script>
