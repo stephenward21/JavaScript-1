@@ -1,0 +1,94 @@
+<script type="text/javascript">
+
+// 1. Find the largest palindrome made from the product of two 3-digit numbers.
+
+function palindromer(x) {
+    var pal = parseInt(x.toString().split('').reverse().join(''));
+
+   if (pal === x)
+        return true;
+    else
+        return false;
+}
+
+var i = 0;
+var j = 0;
+var product = 0;
+var max = 0;
+
+
+for (i = 100; i < 1000; i++) {
+    for (j = i; j < 1000; j++) {
+        product = i * j;
+        if (palindromer(product)) {
+          if( max < product ) { // this is new
+            max = product;
+            console.log(i + '*' + j + '=' + product);
+          }
+        }
+    }
+}
+
+
+
+// 2. What is the smallest positive number that is evenly divisible by all of the numbers from 1 to 20?
+
+function getSmallestDivisor(n){
+  var i = n;
+
+ // if not 0 then i++
+  function checkI(i){
+    for (var j = 1; j <= n; j++) {
+      // loop 20 % i   where i goes from 1 to 20  must % = 0
+      if( i % j !== 0 ){ return false; }
+    };
+    return true;
+  }
+  // break loop when n all are 0
+  while( !(checkI(i)) ){ i+=n; }
+  return i;
+}
+
+console.log(getSmallestDivisor(20));
+
+
+
+// var numbToDivide = 0
+// var newArray = [];
+// function divisBy(numba) {
+// 	for (i = 1; i <= 20; i++){
+// 		if (numbToDivide % i == 0){
+// 			return true;
+// 		}else{
+// 			return false;
+// 		}
+// 			// newArray.push(numbToDivide);
+// 			// console.log(newArray)
+
+// 		}
+// 	}
+// }
+// divisBy(numbToDivide)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
