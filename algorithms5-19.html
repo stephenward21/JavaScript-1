@@ -1,0 +1,104 @@
+<script type="text/javascript">
+
+
+
+//////////////////////////////////////
+// SOLUTION 1: CONVERTING TO STRING //
+//////////////////////////////////////
+var satCount = 0;
+for(let j = 1701; j < 1800; j++){
+    for(let i = 0; i <= 11; i++){
+        var firstOfMonth = new Date(j,i,1);
+        var firstOfMonthString = String(firstOfMonth);
+        // console.dir(satOfYear);
+        var satOfYear = firstOfMonthString.includes('Sat');
+        // console.log(satOfYear);
+        if(satOfYear == true){
+            satCount++;
+            console.log(i,j);
+        }
+    }
+}
+console.log(satCount);
+
+////////////////////////////////
+// SOLUTION 2: USING GETDAY() //
+////////////////////////////////
+
+var satCount = 0;
+for(let j = 1701; j < 1800; j++){
+    for(let i = 0; i <= 11; i++){
+        var firstOfMonth = new Date(j,i,1);
+        var firstSatOfMonth = firstOfMonth.getDay();
+        if(firstSatOfMonth == 6){
+            satCount++;
+            console.log(i,j);
+        }
+    }
+}
+
+console.log(satCount);
+
+
+// 2.  North POLEEEEEEEE
+
+
+// 3. Roman Numeral Converter
+
+
+function getRomNum(num){
+var digits = [1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1];
+var romanNums = ['M','CM','D','CD','C','XC','L','XL','X','IX','V','IV','I'];
+var result = '';
+    for (let i = 0; i < digits.length; i++){
+        while(num % digits[i] < num){
+            result += romanNums[i];
+            num -= digits[i];
+        }
+    }
+    console.log(result);
+}
+
+getRomNum(108);
+
+
+//Dictionary work-out
+
+var romNum = {
+    "I": 1,
+    "V": 5,
+    "X": 10,
+    "L": 50,
+    "C": 100,
+    "D": 500,
+    "M": 1000,
+
+}
+
+var result = '';
+// console.log(Object.keys(romNum).length);
+function getRomNum (int){
+
+    for (var key in romNum){
+        // console.log(key)
+        while(int % romNum[key] < int){
+            console.log(romNum[key])
+            result += key;
+            int -= romNum[key];
+        }
+    }
+    console.log(result);
+
+}
+
+getRomNum(105);
+
+
+
+
+
+
+
+
+
+</script>
